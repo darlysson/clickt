@@ -3,7 +3,7 @@ import { createClient, groq } from 'next-sanity'
 
 const client = createClient({
   apiVersion: '2023-03-04',
-  projectId: process.env.SANITY_PROJECT_ID,
+  projectId: 'zszt8ra7',
   dataset: 'production',
   useCdn: false,
 })
@@ -20,7 +20,7 @@ type Image = {
   }
 }
 
-type Homepage = {
+export type Homepage = {
   homepageImages: Image[]
 }
 

@@ -9,8 +9,8 @@ export default function Layout({
   children: React.ReactNode
 }) {
   return (
-    <html>
-      <body>{children}</body>
+    <html className="antialiased bg-red-400" style={{ margin: 0, height: '100%' }}>
+      <body style={{ boxSizing: 'border-box', margin: 0, padding: 0, height: '100%', outline: 'none' }}>{children}</body>
     </html>
   )
 }
