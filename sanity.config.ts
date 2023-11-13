@@ -5,7 +5,7 @@ import { schemaTypes } from './sanity/schemas'
 export const config = defineConfig({
   name: 'default',
   title: 'Clickt',
-  projectId: 'zszt8ra7',
+  projectId: `${process.env.SANITY_PROJECT_ID}`,
   dataset: 'production',
   basePath: '/admin',
 
