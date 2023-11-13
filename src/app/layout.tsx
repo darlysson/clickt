@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Josefin_Sans } from "next/font/google";
 import { css, cx } from '../../styled-system/css';
 
+import Navbar from '@/components/Navbar';
 import './global.css';
 
 export const metadata: Metadata = {
@@ -18,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cx(josefinSans.className, css({ fontSmoothing: 'antialiased', overflow: 'hidden' }))}>
-      <body className={css({ boxSizing: 'border-box', margin: 0, padding: 0, height: '100%', outline: 'none ' })}>{children}</body>
+      <body className={css({ boxSizing: 'border-box', margin: 0, padding: 0, height: '100%', outline: 'none ' })}>
+        <Navbar />
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
